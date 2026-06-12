@@ -21,15 +21,47 @@ function fizzBuzz(n) {
   return result;
 }
 ```
-Input:
+Input: n = 3
+Output: ["1","2","Fizz"] 
 
-Output:
+Algorithm: 
 
-Algorith:
+Create a empty list result
+
+loop through each number from 1 - n
+
+if the number is divisible by 5 and 3 print "FizzBuzz"
+
+otherwise if the number is divisible by 3 add "Fizz" to result
+otherwise if the number is divisible by 5 add "Buzz" to result
+
+if none of the above conditions are true then convert the number into the string and add it to the result
+
+return completed list
+
+
+
+
 
 
 Python Solution:
 
 ```py
 # solution here
+
+class Solution(object):
+    def fizzBuzz(self, n):
+        result = []
+
+        for i in range(1, n + 1):
+            if i % 15 == 0:
+                result.append("FizzBuzz")
+            elif i % 3 == 0:
+                result.append("Fizz")
+            elif i % 5 == 0:
+                result.append("Buzz")
+            else:
+                result.append(str(i))
+
+        return result
 ```
